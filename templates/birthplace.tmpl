@@ -1,0 +1,66 @@
+<div itemscope itemtype="http://schema.org/Dataset">
+<div id = "birthplace" class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><span itemprop="about">Place of Birth data for <span itemprop="spatial">{{value_name}} </h3>
+			</div>			
+			<div  class="panel-body">
+			<div class = "col-xs-6">		
+			<p>	{{name_tot_pop}} in {{value_name}} : <span class="label label-primary">{{value_tot_pop}}</span>					
+			</p>
+			<div id="name_nat_vs_foreign" style="min-width: 175px; height: 250px; max-width: 300px;"></div>						
+			
+			<div class="table-responsive">
+						<table
+							class="table table-condensed table-striped table-bordered table-hover no-margin">
+							<thead>
+								<tr>
+									<th style="width: 10%"><span itemprop="about">{{name_nat_vs_foreign}}</th>								
+									<th style="width: 10%">Estimate (%)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span itemprop="about">{{name_native}}</td>								
+									<td>{{value_native}}</td>
+								</tr>
+								<tr>
+									<td><span itemprop="about">{{name_foreign_born}}</td>								
+									<td>{{value_foreign_born}}</td>
+								</tr>													
+								
+							</tbody>
+						</table>
+					</div>					
+		</div>
+		
+		<div class = "col-xs-6">
+		<div class="table-responsive">
+						<table
+							class="table table-condensed table-striped table-bordered table-hover no-margin">
+							<thead>
+								<tr>
+									<th style="width: 10%"><span itemprop="about">Native population breakdown</th>								
+									<th style="width: 10%">Estimate (%)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span itemprop="about">{{name_native_born_in_us_same_state}}</td>								
+									<td>{{value_native_born_in_us_same_state}}</td>
+								</tr>
+								<tr>
+									<td><span itemprop="about">{{name_native_born_in_us_different_state}}</td>								
+									<td>{{value_native_born_in_us_different_state}}</td>
+								</tr>
+								<tr>
+									<td><span itemprop="about">{{name_native_puerto_rico}}</td>								
+									<td>{{value_native_puerto_rico}}</td>
+								</tr>														
+								
+							</tbody>
+						</table>
+					</div>	
+					</div>
+					</div>
+					</div>
+					</div>

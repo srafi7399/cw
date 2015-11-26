@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /spring/
+Disallow: /classes/
+Sitemap: http://www.censtat.com/assets/Sitemap.xml

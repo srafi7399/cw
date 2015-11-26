@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE tiles-definitions PUBLIC
+           "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+           "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<!-- This file contains Apache Tiles page layout definitions -->
+
+<tiles-definitions>
+
+	<!-- The main definition with header, menu, body and footer -->
+	<definition name="base" template="/WEB-INF/views/tiles/template.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+		<put-attribute name="leftbar" value="/WEB-INF/views/tiles/leftbar.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="home" value="" />
+		<put-attribute name="states" value="" />
+		<put-attribute name="rightbar" value="/WEB-INF/views/tiles/rightbar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp" />
+	</definition>
+
+
+	<definition name="homep" template="/WEB-INF/views/tiles/hometemplate.jsp">
+		<put-attribute name="title" value="" />		
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+		<put-attribute name="homecontent" value="" />
+		<put-attribute name="comments" value="" />
+		<put-attribute name="states" value="" />
+		<put-attribute name="aboutus" value="" />	
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp" />
+	</definition>
+
+
+	<definition name="content" extends="base">
+		<put-attribute name="title" value="Unites States Population 2010-2014" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/content.jsp" />	
+		<put-attribute name="current" value="content" cascade="true" />
+	</definition>
+
+	<definition name="home" extends="homep">
+		<put-attribute name="title" value="Censtat.com provides Information and stats about for US states, cities, metros, counties and micros about age,race,education levels, maritial status,sex ratios,veterans,languages etc." />
+		<put-attribute name="homecontent" value="/WEB-INF/views/tiles/homecontent.jsp" />
+		<put-attribute name="current" value="home" cascade="true" />
+	</definition>
+	
+
+	<definition name="comments" extends="homep">
+		<put-attribute name="title" value="Submit Comments" />
+		<put-attribute name="comments" value="/WEB-INF/views/tiles/comments.jsp" />
+		<put-attribute name="current" value="comments" cascade="true" />
+	</definition>
+
+	<definition name="aboutus" extends="homep">
+		<put-attribute name="title" value="About Us" />
+		<put-attribute name="aboutus" value="/WEB-INF/views/tiles/aboutus.jsp" />
+		<put-attribute name="current" value="aboutus" cascade="true" />
+	</definition>
+
+<definition name="states" extends="homep">		
+		<put-attribute name="homecontent" value="/WEB-INF/views/tiles/states.jsp" />
+		<put-attribute name="current" value="states" cascade="true" />		
+	</definition>
+	
+{{#links}}
+<definition name="{{linkValue}}" extends="homep">		
+		<put-attribute name="homecontent" value="/WEB-INF/views/tiles{{linkName}}.jsp" />		
+		<put-attribute name="title" value="Information and stats for {{entityName}} about age, race, sex, marital status, school enrollment, place of birth, Citizenship status, Veterans status, Ancestry etc. " />
+		<put-attribute name="current" value="" cascade="true" />		
+	</definition>
+	{{/links}}  
+	
+	
+	 </tiles-definitions>           		

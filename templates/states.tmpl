@@ -1,0 +1,45 @@
+<div class="row">
+<div class="bs-example">
+    <ul class="breadcrumb">
+    	{{#links}}
+        <li><a href="{{linkValue}}">{{linkName}}</a></li> 
+        {{/links}}      
+        <li class="active">{{active}}</li>
+    </ul>
+</div>
+</div>
+<div class="table-responsive">
+  <table class="table table-condensed table-striped table-bordered table-hover no-margin">
+    <thead>
+      <tr>        
+        <th style="width:10%">Name</th>
+        <th style="width:10%" >Population</th> 
+         <th style="width:10%" >Male Vs Female (%)</th>  
+         <th style="width:10%" >Median Age</th>  
+         <th style="width:10%" >Population with Bachelors or higher degrees (%)</th>    
+         <th style="width:10%" >Hispanic Population(%)</th>        
+        <th style="width:10%"">Average Family Size</th>
+      </tr>
+    </thead>
+    <tbody>    
+    {{#entities}}
+      <tr>       
+        <td>        
+          <span class="name"> <a href="{{entitylink}}">{{entityname}}</a></span>
+        </td>        
+        <td>{{entitypopulation}}     
+        </td>
+        <td>{{malepercent}}% Male and {{femalepercent}}% female
+        </td>
+        <td>{{medianage}} years        
+        </td>
+        <td>{{bachelorsorhigher}}
+        </td>
+        <td>{{hispanic}} 
+        </td>
+        <td> {{avefamilysize}}
+        </td>        
+      {{/entities}}     
+    </tbody>
+  </table>
+</div>                            		

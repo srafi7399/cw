@@ -1,0 +1,11 @@
+{{#keys}}
+public String {{getkey}}()
+{
+if(this.keyMap.get("{{getkey}}")!=null)
+{
+return this.keyMap.get("{{getkey}}").toString();
+}
+return "no data";
+} 
+{{updateindex}} 
+{{/keys}}   		

@@ -1,0 +1,226 @@
+
+<style type="text/css">
+/* Custom Styles */
+ul.nav-tabs {
+	width: 250px;
+	margin-top: 20px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+ul.nav-tabs li {
+	margin: 0;
+	border-top: 1px solid #ddd;
+}
+ul.nav-tabs li:first-child {
+	border-top: none;
+}
+ul.nav-tabs li a {
+	margin: 0;
+	padding: 8px 16px;
+	border-radius: 0;
+}
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
+	color: #fff;
+	background: #0088cc;
+	border: 1px solid #0088cc;
+}
+ul.nav-tabs li:first-child a {
+	border-radius: 4px 4px 0 0;
+}
+ul.nav-tabs li:last-child a {
+	border-radius: 0 0 4px 4px;
+}
+ul.nav-tabs.affix {
+	top: 30px; /* Set the top position of pinned element */
+}
+</style>
+  
+  <script>
+  $(document).ready(function() 
+          {   
+			
+	  var re= ${fipcode};	  
+	  var dat ;
+	  $.ajax({
+			url : '${pageContext.request.contextPath}/charts',
+			type : "GET",			
+			headers: {
+		        'resource':re
+			},
+			dataType : "json",
+			contentType : "application/json",
+				success: function(data){     
+	             var obj= JSON.parse(JSON.stringify(data));           
+	             var temp = obj.idToJsonMap; 
+	            for (var key in temp) {
+   			 	drawchart(key,temp[key]);
+				}
+	              
+	             }
+		});
+		        	 
+        	 function drawchart(chartid, jsonstring){
+        			
+        	         	 var obj = JSON.parse(jsonstring);        	              	
+        	      	    // Build the chart
+        	      	     new Highcharts.Chart({
+        	      	        chart: {
+        	      	        	renderTo:chartid,
+        	      	            plotBackgroundColor: null,
+        	      	            plotBorderWidth: null,
+        	      	            plotShadow: false
+        	      	            
+        	      	        },
+        	      	        title: {
+        	      	            text: obj.chartTitle
+        	      	        },
+        	      	        tooltip: {
+        	      	            pointFormat: '<b>{point.percentage:.1f}%</b>'
+        	      	        },
+        	      	        plotOptions: {
+        	      	            pie: {
+        	      	                allowPointSelect: true,
+        	      	                cursor: 'pointer',
+        	      	                showInLegend: obj.plotOptions.showInLegend,
+        	      	                dataLabels: {
+        	      	                    enabled: obj.plotOptions.dataLabels.enabled,
+        	      	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        	      	                    style: {
+        	      	                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+        	      	                    },
+        	      	                    connectorColor: 'silver'
+        	      	                }
+        	      	            }
+        	      	        },
+        	      	        series: [{
+        	      	            type: 'pie',             
+        	      	            name: obj.series.name,
+        	      	            data: obj.series.data
+        	      	        }] 
+        	      	    
+        	      	    });
+        	      	};
+        	
+    
+    
+   
+         });
+   
+    </script>
+<div class="col-xs-8">	
+<div itemscope itemtype="http://schema.org/Dataset">				
+		<div id = "sexsection" class="panel panel-default">
+		
+			<div class="panel-heading">
+				<h3 class="panel-title"><span itemprop="about">The ratio of Male to Female population in {{value_name}}</h3>
+			</div>
+			<div  class="panel-body">
+			<div class = "col-xs-4">		
+			<p>	Total population : <span class="label label-primary">{{value_total_population}}</span>
+			</p><div id="name_male_female_percentage" style="min-width: 175px; height: 250px; max-width: 300px;"></div>	
+			<div class="table-responsive">
+						<table
+							class="table table-condensed table-striped table-bordered table-hover no-margin">
+							<thead>
+								<tr>
+									<th style="width: 10%">{{name_male_female_percentage}}</th>								
+									<th style="width: 10%">Estimate (%)</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>{{name_total_population_male}}</td>								
+									<td>{{value_total_population_male}}</td>
+								</tr>
+								<tr>
+									<td>{{name_total_population_female}}</td>								
+									<td>{{value_total_population_female}}</td>
+								</tr>						
+							
+							</tbody>
+						</table>
+					</div>							
+			</div>
+			<div class="col-xs-4">		
+			<p>{{name_18_years_and_over_cdp}}: <span class="label label-primary">{{value_18_years_and_over_cdp}}</span>
+			</p><div id="name_18_years_and_over_cdp" style="min-width: 175px; height: 250px; max-width: 300px;"></div>	
+			<div class="table-responsive">
+						<table
+							class="table table-condensed table-striped table-bordered table-hover no-margin">
+							<thead>
+								<tr>
+									<th style="width: 10%">{{name_18_years_and_over_cdp}}</th>								
+									<th style="width: 10%">Estimate (%)</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>{{name_18_years_and_over_male}}</td>								
+									<td>{{value_18_years_and_over_male}}</td>
+								</tr>
+								<tr>
+									<td>{{name_18_years_and_over_female}}</td>								
+									<td>{{value_18_years_and_over_female}}</td>
+								</tr>											
+								
+							</tbody>
+						</table>
+					</div>							
+			</div>
+			<div class="col-xs-4">			
+			<p>{{name_65_years_and_over_cdp}}: <span class="label label-primary">{{value_65_years_and_over_cdp}}</span>
+			</p>
+			<div id="name_65_years_and_over_cdp" style="min-width: 175px; height: 250px; max-width: 300px;"></div>	
+			<div class="table-responsive">
+						<table
+							class="table table-condensed table-striped table-bordered table-hover no-margin">
+							<thead>
+								<tr>
+									<th style="width: 10%">{{name_65_years_and_over_cdp}}</th>								
+									<th style="width: 10%">Estimate (%)</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>{{name_65_years_and_over_male}}</td>								
+									<td>{{value_65_years_and_over_male}}</td>
+								</tr>
+								<tr>
+									<td>{{name_65_years_and_over_fe_male}}</td>								
+									<td>{{value_65_years_and_over_fe_male}}</td>
+								</tr>
+												
+								
+							</tbody>
+						</table>
+					</div>							
+			</div>
+			</div>
+			</div>
+		
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><span itemprop="about">Age details for {{value_name}}  </h3>
+			</div>	
+			<div id="agesection" class="panel-body">
+			<div class = "col-xs-4">		
+			<p>{{name_median_age_in_years}}: <span class="label label-primary">{{value_median_age_in_years}} years</span>
+			<p>{{name_18_years_and_over}}: <span class="label label-primary">{{value_18_years_and_over}}%</span>
+			<p>{{name_21_years_and_over}}: <span class="label label-primary">{{value_21_years_and_over}}%</span>
+			<p>{{name_62_years_and_over}}: <span class="label label-primary">{{value_62_years_and_over}}%</span>
+			<p>{{name_65_years_and_over}}: <span class="label label-primary">{{value_65_years_and_over}}%</span>								
+			</div>
+			<div class = "col-xs-8">				
+			<div id="name_age_distribution" style="min-width: 250px; height: 350px; max-width: 600px;"></div>						
+			</div>					
+		</div>
+		</div>
+		
+		</div>
+					
+		

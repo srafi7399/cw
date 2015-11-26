@@ -1,0 +1,183 @@
+KEY,ANNOTATION,PROPERTY_DESCRIPTION,IDENTIFIER
+ENTITY_NAME,CREATE_ENTITY,,NONE
+ENTITY_STATE,SET_STATE,,NONE
+ENTITY_FIP_CODE,SET_FIP,,NONE
+ENTITY_TYPE,SET_TYPE,,NONE
+MODULE_HOUSEHOLD_TYPE,CREATE_DATA_MODULE,Households By Type,hoshold_by_type
+HC01_VC03,CREATE_DATA_POINT,Total Households,tot_hoshold
+FAMILY_NONFAMILY_CDP,CREATE_COMPOSITE_DATA_POINT,Family vs Non Family Households,fam_vs_nonfam_hos
+HC01_VC04,CREATE_DATA_FRAGMENT,Family households (families),fam_hoshold
+HC01_VC05,NONE,,NONE
+HC01_VC06,CREATE_SUBDATA_FRAGMENT,Married Couple family,marr_couple_fam
+HC01_VC07,NONE,,NONE
+HC01_VC08,CREATE_SUBDATA_FRAGMENT,Male Household- No Wife Present,male_no_wife_hoshold
+HC01_VC09,NONE,,NONE
+HC01_VC10,CREATE_SUBDATA_FRAGMENT,Female Household-No Husband Present,female_no_male_hoshold
+HC01_VC11,NONE,,NONE
+HC01_VC12,CREATE_DATA_FRAGMENT,Nonfamily households,non_fam_hoshold
+HC01_VC13,CREATE_SUBDATA_FRAGMENT,Householder living alone,hosholder_liv_alone
+HC01_VC14,CREATE_SUBDATA_FRAGMENT,65 years and over,hosholder_liv_alone_65_over
+HC01_VC17,CREATE_DATA_POINT,Households with one or more people under 18 years,hoshold_below_18
+HC01_VC18,CREATE_DATA_POINT,Households with one or more people 65 years and over,hoshold_above_65
+HC01_VC21,CREATE_DATA_POINT,Average household size,ave_hoshold_size
+HC01_VC22,CREATE_DATA_POINT,Average family size,ave_fam_size
+MODULE_RELATIONSHIP,CREATE_DATA_MODULE,Relationship,relationship
+HC01_VC26,CREATE_DATA_POINT,Population in households,pop_in_hosholds
+RELATIONSHIP_CDP,CREATE_COMPOSITE_DATA_POINT,Relationship by type,relationship_by_type
+HC01_VC27,CREATE_DATA_FRAGMENT,Householder,relationship_by_type_householder
+HC01_VC28,CREATE_DATA_FRAGMENT,Spouse,relationship_by_type_spouse
+HC01_VC29,CREATE_DATA_FRAGMENT,Child,relationship_by_type_child
+HC01_VC30,CREATE_DATA_FRAGMENT,Other relatives,relationship_by_type_other_rel
+HC01_VC31,CREATE_DATA_FRAGMENT,Nonrelatives,relationship_by_type_nonrel
+HC01_VC32,CREATE_SUBDATA_FRAGMENT,Unmarried partner,relationship_by_type_unmar_part
+MODULE_MARITIAL_STATUS,CREATE_DATA_MODULE,Maritial Status,maritial_status
+HC01_VC36,CREATE_DATA_POINT,Males 15 years and over,male_15_over
+MALE_MARITIAL_STATUS_CDP,CREATE_COMPOSITE_DATA_POINT,Maritial Status of Males,maritial_status_male
+HC01_VC37,CREATE_DATA_FRAGMENT,Never married,maritial_status_male_never_married
+HC01_VC38,CREATE_DATA_FRAGMENT,"Now married, except separated",maritial_status_male_now_married
+HC01_VC39,CREATE_DATA_FRAGMENT,Separated,maritial_status_male_seperated
+HC01_VC40,CREATE_DATA_FRAGMENT,Widowed,maritial_status_male_widowed
+HC01_VC41,CREATE_DATA_FRAGMENT,Divorced,maritial_status_male_divorced
+HC01_VC43,CREATE_DATA_POINT,Females 15 years and over,female_15_over
+FEMALE_MARITIAL_STATUS_CDP,CREATE_COMPOSITE_DATA_POINT,Maritial Status of females,maritial_status_female
+HC01_VC44,CREATE_DATA_FRAGMENT,Never married,maritial_status_female_never_married
+HC01_VC45,CREATE_DATA_FRAGMENT,"Now married, except separated",maritial_status_female_now_married
+HC01_VC46,CREATE_DATA_FRAGMENT,Separated,maritial_status_female_seperated
+HC01_VC47,CREATE_DATA_FRAGMENT,Widowed,maritial_status_female_widowed
+HC01_VC48,CREATE_DATA_FRAGMENT,Divorced,maritial_status_female_divorced
+MODULE_FERTILITY,CREATE_DATA_MODULE,Fertility,fertitlity
+HC01_VC52,CREATE_DATA_POINT,Number of women 15 to 50 years old who had a birth in the past 12 months,women_15_to_15_birth_last_12
+HC01_VC53,CREATE_DATA_POINT,"Unmarried women (widowed, divorced, and never married)",women_15_to_15_birth_last_12_unmarried
+FERTILITY_PER_1000_CDP,CREATE_COMPOSITE_DATA_POINT,Fertility per 1000 women,fertitlity_per_1000
+HC01_VC54,CREATE_DATA_FRAGMENT,"Per 1,000 unmarried women",fertitlity_per_1000_unmarried
+HC01_VC55,CREATE_DATA_FRAGMENT,"Per 1,000 women 15 to 50 years old",fertitlity_per_1000_15_to_50
+HC01_VC56,CREATE_DATA_FRAGMENT,"Per 1,000 women 15 to 19 years old",fertitlity_per_1000_15_to_19
+HC01_VC57,CREATE_DATA_FRAGMENT,"Per 1,000 women 20 to 34 years old",fertitlity_per_1000_20_to_34
+HC01_VC58,CREATE_DATA_FRAGMENT,"Per 1,000 women 35 to 50 years old",fertitlity_per_1000_35_to_50
+MODULE_GRANDPARENTS,CREATE_DATA_MODULE,Grandparents,garndparents
+HC01_VC62,CREATE_DATA_POINT,Number of grandparents living with own grandchildren under 18 years,gp_with_gc_under18
+HC01_VC63,CREATE_DATA_POINT,Grandparents responsible for grandchildren,gp_res_for_gc
+GRANDPARENT_RESPONSIBLE_CDP,CREATE_COMPOSITE_DATA_POINT,Grandparents responsible for grandchildren -number of years,gp_res_for_gc_noy
+HC01_VC65,CREATE_DATA_FRAGMENT,Less than 1 year,gp_res_for_fc_less_1yr
+HC01_VC66,CREATE_DATA_FRAGMENT,1 or 2 years,gp_res_for_gc_1_or_2yr
+HC01_VC67,CREATE_DATA_FRAGMENT,3 or 4 years,gp_res_for_gc_3_or_4yr
+HC01_VC68,CREATE_DATA_FRAGMENT,5 or more years,gp_res_for_gc_5_or_more_yr
+HC01_VC70,CREATE_DATA_POINT,Number of grandparents responsible for own grandchildren under 18 years,gp_res_own_gc_under18
+HC01_VC71,CREATE_DATA_POINT,Percentage of female grandparents responsible for own grandchildren under 18 years,per_fgp_res_own_gc_under18
+HC01_VC72,CREATE_DATA_POINT,Percentage of male grandparents responsible for own grandchildren under 18 years,per_mgp_res_own_gc_under18
+MODULE_SCHOOL_ENROLLMENT,CREATE_DATA_MODULE,School Enrollment,school_enrollment
+HC01_VC76,CREATE_DATA_POINT,Population 3 years and over enrolled in school,pop_3_over_enrolled_school
+SCHOOL_ENROLLMENT_CDP,CREATE_COMPOSITE_DATA_POINT,School Enrollment by Grade,school_enrollment_by_grade
+HC01_VC77,CREATE_DATA_FRAGMENT,"Nursery school, preschool",school_entollment_nur_preschool
+HC01_VC78,CREATE_DATA_FRAGMENT,Kindergarten,school_enrollment_kinder_garten
+HC01_VC79,CREATE_DATA_FRAGMENT,Elementary school (grades 1-8),school_enrollment_elementary
+HC01_VC80,CREATE_DATA_FRAGMENT,High School (grades 9-12),school_enrollment_high_school
+HC01_VC81,CREATE_DATA_FRAGMENT,College or graduate school,school_enrollment_college
+MODULE_EDUCATIONAL_ATTAINMENT,CREATE_DATA_MODULE,Educational Attainment,educational_attainment
+HC01_VC85,CREATE_DATA_POINT,Population 25 years and over,educational_attainment_pop_25_over
+EDUCATIONAL_ATTAINMENT_CDP,CREATE_COMPOSITE_DATA_POINT,Educational Attainment levels,educational_attainment_levels
+HC01_VC86,CREATE_DATA_FRAGMENT,Less than 9th grade,educational_attainment_less_9
+HC01_VC87,CREATE_DATA_FRAGMENT,"9th to 12th grade, no diploma",educational_attainment_9_to_12
+HC01_VC88,CREATE_DATA_FRAGMENT,High school graduate (includes equivalency),educational_attainment_high_school
+HC01_VC89,CREATE_DATA_FRAGMENT,"Some college, no degree",educational_attainment_some_college
+HC01_VC90,CREATE_DATA_FRAGMENT,Associates degree,educational_attainment_associates
+HC01_VC91,CREATE_DATA_FRAGMENT,Bachelors degree,educational_attainment_bachelors
+HC01_VC92,CREATE_DATA_FRAGMENT,Graduate or professional degree,educational_attainment_graduate
+HC01_VC95,CREATE_DATA_POINT,Percent high school graduate or higher,educational_attainment_per_hs_higher
+HC01_VC96,CREATE_DATA_POINT,Percent bachelors degree or higher,educational_attainment_per_bachelors_higher
+MODULE_VETERAN_STATUS,CREATE_DATA_MODULE,Veteran Status,veteran_status
+HC01_VC100,CREATE_DATA_POINT,Civilian population 18 years and over,veteran_status_civpop_18_over
+HC01_VC101,CREATE_DATA_POINT,Civilian Veterans,veteran_status_civ_veterans
+HC01_VC105,NONE,,NONE
+HC01_VC106,NONE,,NONE
+HC01_VC108,NONE,,NONE
+HC01_VC109,NONE,,NONE
+HC01_VC111,NONE,,NONE
+HC01_VC112,NONE,,NONE
+HC01_VC114,NONE,,NONE
+HC01_VC115,NONE,,NONE
+HC01_VC119,NONE,,NONE
+HC01_VC120,NONE,,NONE
+HC01_VC121,NONE,,NONE
+HC01_VC122,NONE,,NONE
+HC01_VC123,NONE,,NONE
+HC01_VC124,NONE,,NONE
+HC01_VC125,NONE,,NONE
+HC01_VC126,NONE,,NONE
+PLACE_OF_BIRTH_MODULE,CREATE_DATA_MODULE,Place of Birth,place_of_birth
+HC01_VC130,CREATE_DATA_POINT,Total Population,tot_pop
+NATIVE_BORN_CDP,CREATE_COMPOSITE_DATA_POINT,Native Vs Foreign Born,nat_vs_foreign
+HC01_VC131,CREATE_DATA_FRAGMENT,Native,native
+HC01_VC132,NONE,,NONE
+HC01_VC133,CREATE_SUBDATA_FRAGMENT,Born in U.S- Same state of residence,native_born_in_us_same_state
+HC01_VC134,CREATE_SUBDATA_FRAGMENT,Born in U.S- different state of residence,native_born_in_us_different_state
+HC01_VC135,CREATE_SUBDATA_FRAGMENT,"Born in Puerto Rico, U.S Island areas, or born abroad to American parent(s)",native_puerto_rico
+HC01_VC136,CREATE_DATA_FRAGMENT,Foreign born ,foreign_born
+CITIZENSHIP_MODULE,CREATE_DATA_MODULE,U.S Citizenship Status,us_citizenship_status
+HC01_VC140,CREATE_DATA_POINT,Foreign born population,foreign_born_pop
+FOREIGN_BORN_CDP,CREATE_COMPOSITE_DATA_POINT,Naturalized U.S Citizen Vs Not a US Citizen,natural_us_citizen_vs_not_a_us_citizen
+HC01_VC141,CREATE_DATA_FRAGMENT,Naturalized U.S citizen ,naturalized_us_citizen
+HC01_VC142,CREATE_DATA_FRAGMENT,Not a U.S citizen,not_a_us_citizen
+HC01_VC146,NONE,,NONE
+HC01_VC149,NONE,,NONE
+HC01_VC150,NONE,,NONE
+HC01_VC151,NONE,,NONE
+HC01_VC154,NONE,,NONE
+HC01_VC155,NONE,,NONE
+HC01_VC156,NONE,,NONE
+FOREIGN_BORN_ROB_MODULE,CREATE_DATA_MODULE,Foreign Born Population- Region of Birth,foreigh_born_population_rob
+HC01_VC160,CREATE_DATA_POINT,"Foreign-born population, excluding population born at sea",foreign_born_population
+FOREIGN_BORN_ROB_CDP,CREATE_COMPOSITE_DATA_POINT,Foreign born population -regions,foreign_born_population_regions
+HC01_VC161,CREATE_DATA_FRAGMENT,Europe,europe
+HC01_VC162,CREATE_DATA_FRAGMENT,Asia,asia
+HC01_VC163,CREATE_DATA_FRAGMENT,Africa,africa
+HC01_VC164,CREATE_DATA_FRAGMENT,Oceania,oceania
+HC01_VC165,CREATE_DATA_FRAGMENT,Latin America,latin_america
+HC01_VC166,CREATE_DATA_FRAGMENT,Northern America,northern_america
+LANGUAGE_AT_HOME_MODULE,CREATE_DATA_MODULE,Languages spoken at home,lang_spoken_at_home
+HC01_VC170,CREATE_DATA_POINT,Population 5 years and over,pop_5yeays_and_over
+LANGUAGE_AT_HOME_CDP,CREATE_COMPOSITE_DATA_POINT,Languages spoken at home,lang_spoken_at_home_bdown
+HC01_VC171,CREATE_DATA_FRAGMENT,English only,english_only
+HC01_VC172,CREATE_DATA_FRAGMENT,Language other than English,lang_other_than_english
+HC01_VC173,CREATE_SUBDATA_FRAGMENT,Speak English less than very well,speak_english_less_than_very_well
+HC01_VC174,CREATE_DATA_FRAGMENT,Spanish,spanish
+HC01_VC175,CREATE_SUBDATA_FRAGMENT,Speak English less than very well,speak_english_less_than_very_well_spanish
+HC01_VC176,CREATE_DATA_FRAGMENT,European languages,european_languages
+HC01_VC177,CREATE_SUBDATA_FRAGMENT,Speak English less than very well,speak_english_less_than_very_well_european
+HC01_VC178,CREATE_DATA_FRAGMENT, Asian and Pacific Islander languages,asian_and_pacafic_islander_langauage
+HC01_VC179,CREATE_SUBDATA_FRAGMENT,Speak English less than very well,speak_english_less_than_very_well_asian
+HC01_VC180,CREATE_DATA_FRAGMENT,Other languages,other_languages
+HC01_VC181,CREATE_SUBDATA_FRAGMENT,Speak English less than very well,speak_english_less_than_very_well_other
+ANCESTRY_MODULE,CREATE_DATA_MODULE,Ancestry,ancestry
+HC01_VC185,CREATE_DATA_POINT,Total Population,ancestry_tot_pop
+HC01_VC186,CREATE_DATA_POINT,American,american
+HC01_VC187,CREATE_DATA_POINT,Arab,arab
+HC01_VC188,CREATE_DATA_POINT,Czech,czech
+HC01_VC189,CREATE_DATA_POINT,Danish,danish
+HC01_VC190,CREATE_DATA_POINT,Dutch,dutch
+HC01_VC191,CREATE_DATA_POINT, English,english
+HC01_VC192,CREATE_DATA_POINT, French (except Basque),french_except_basque
+HC01_VC193,CREATE_DATA_POINT, French Canadian,french_canadian
+HC01_VC194,CREATE_DATA_POINT, German,german
+HC01_VC195,CREATE_DATA_POINT, Greek,greek
+HC01_VC196,CREATE_DATA_POINT, Hungarian,hungarian
+HC01_VC197,CREATE_DATA_POINT, Irish,irish
+HC01_VC198,CREATE_DATA_POINT, Italian,italian
+HC01_VC199,CREATE_DATA_POINT, Lithuanian,lithuanian
+HC01_VC200,CREATE_DATA_POINT, Norwegian,norwegian
+HC01_VC201,CREATE_DATA_POINT, Polish,polish
+HC01_VC202,CREATE_DATA_POINT, Portuguese,portuguese
+HC01_VC203,CREATE_DATA_POINT, Russian,russian
+HC01_VC204,CREATE_DATA_POINT, Scotch-Irish,scotch_irish
+HC01_VC205,CREATE_DATA_POINT, Scottish,scottish
+HC01_VC206,CREATE_DATA_POINT, Slovak,slovak
+HC01_VC207,CREATE_DATA_POINT, Subsaharan African,subsaharan_africa
+HC01_VC208,CREATE_DATA_POINT, Swedish,swedish
+HC01_VC209,CREATE_DATA_POINT, Swiss,swiss
+HC01_VC210,CREATE_DATA_POINT, Ukrainian,ukrainian
+HC01_VC211,CREATE_DATA_POINT, Welsh,welsh
+HC01_VC212,CREATE_DATA_POINT, West Indian (excluding Hispanic origin groups),west_indian
+COMPUTERS_AND_INTERNET_MODULE,CREATE_DATA_MODULE,Computer and Internet Use,cmp_and_internet_use
+HC01_VC216,CREATE_DATA_POINT,Total Households,tot_hoshold_cmp
+HC01_VC217,CREATE_DATA_POINT,Households with a Computer,hoshold_with_computer
+HC01_VC218,CREATE_DATA_POINT,Households with a broadband internet subscription,hoshold_with_bb_internet

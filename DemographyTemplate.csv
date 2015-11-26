@@ -1,0 +1,93 @@
+KEY,ANNOTATION,PROPERTY_DESCRIPTION,IDENTIFIER
+ENTITY_NAME,CREATE_ENTITY,Name ,name 
+ENTITY_STATE,SET_STATE,State,state
+ENTITY_FIP_CODE,SET_FIP,FIP CODE,fip_code
+ENTITY_TYPE,SET_TYPE,TYPE,type
+MODULE_SEX_AGE,CREATE_DATA_MODULE,Sex and Age,sex_and_age
+HC01_VC03,CREATE_DATA_POINT,Total Population,total_population
+MALE_FEMALE_CDP,CREATE_COMPOSITE_DATA_POINT,Male vs Female Percentage,male_female_percentage
+HC01_VC04,CREATE_DATA_FRAGMENT,Total Population -Male,total_population_male
+HC01_VC05,CREATE_DATA_FRAGMENT,Total population - Female,total_population_female
+AGE_DISTRIBUTION_CDP,CREATE_COMPOSITE_DATA_POINT,Age Distribution,age_distribution
+HC01_VC08,CREATE_DATA_FRAGMENT,Under 5 years,under_5_years
+HC01_VC09,CREATE_DATA_FRAGMENT,5 to 9 years,5_to_9_years
+HC01_VC10,CREATE_DATA_FRAGMENT,10 to 14 years,10_to_14_years
+HC01_VC11,CREATE_DATA_FRAGMENT,15 to 19 years,15_to_19_years
+HC01_VC12,CREATE_DATA_FRAGMENT,20 to 24 years,20_to_24_years
+HC01_VC13,CREATE_DATA_FRAGMENT,25 to 34 years,25_to_34_years
+HC01_VC14,CREATE_DATA_FRAGMENT,35 to 44 years,35_to_44_years
+HC01_VC15,CREATE_DATA_FRAGMENT,45 to 54 years,45_to_54_years
+HC01_VC16,CREATE_DATA_FRAGMENT,55 to 59 years,55_to_59_years
+HC01_VC17,CREATE_DATA_FRAGMENT,60 to 64 years,60_to_64_years
+HC01_VC18,CREATE_DATA_FRAGMENT,65 to 74 years,65_to_74_years
+HC01_VC19,CREATE_DATA_FRAGMENT,75 to 84 years,75_to_84_years
+HC01_VC20,CREATE_DATA_FRAGMENT,85 years and over,85_years_and_over
+HC01_VC23,CREATE_DATA_POINT,Median age (years),median_age_in_years
+HC01_VC26,CREATE_DATA_POINT,18 years and over,18_years_and_over
+HC01_VC27,CREATE_DATA_POINT,21 years and over,21_years_and_over
+HC01_VC28,CREATE_DATA_POINT,62 years and over,62_years_and_over
+HC01_VC29,CREATE_DATA_POINT,65 years and over,65_years_and_over
+HC01_VC32,CREATE_COMPOSITE_DATA_POINT,18 years and over,18_years_and_over_cdp
+HC01_VC33,CREATE_DATA_FRAGMENT,18 years and over  Male,18_years_and_over_male
+HC01_VC34,CREATE_DATA_FRAGMENT,18 years and over  Female,18_years_and_over_female
+HC01_VC37,CREATE_COMPOSITE_DATA_POINT,65 years and over,65_years_and_over_cdp
+HC01_VC38,CREATE_DATA_FRAGMENT,65 years and over  Male,65_years_and_over_male
+HC01_VC39,CREATE_DATA_FRAGMENT,65 years and over  Female,65_years_and_over_fe_male
+MODULE_RACE,CREATE_DATA_MODULE,Race,race
+HC01_VC43,CREATE_DATA_POINT,Total population,total_population_race
+HC01_VC44,CREATE_DATA_POINT,One race,one_race
+HC01_VC45,CREATE_DATA_POINT,Two or more races,two_or_more_race
+RACE_DISTRIBUTION_CDP,CREATE_COMPOSITE_DATA_POINT,Race Breakdown,race_breakdown
+HC01_VC48,NONE,One race race,NONE
+HC01_VC49,CREATE_DATA_FRAGMENT,White,one_race_white
+HC01_VC50,CREATE_DATA_FRAGMENT,Black or African American,one_race_black_or_african_american
+HC01_VC51,CREATE_DATA_FRAGMENT,American Indian and Alaska Native,one_race_american_indian_and_alaska_native
+HC01_VC52,CREATE_SUBDATA_FRAGMENT,Cherokee tribal grouping,american_indian_cherokee_tribal
+HC01_VC53,CREATE_SUBDATA_FRAGMENT,Chippewa tribal grouping,american_indian_chippewa_tribal
+HC01_VC54,CREATE_SUBDATA_FRAGMENT,Navajo tribal grouping,american_indian_navajo_tribal
+HC01_VC55,CREATE_SUBDATA_FRAGMENT,Sioux tribal grouping,american_indian_sioux_tribal
+HC01_VC56,CREATE_DATA_FRAGMENT,Asian,one_race_asian
+HC01_VC57,CREATE_SUBDATA_FRAGMENT,Asian Indian,one_race_asian_indian
+HC01_VC58,CREATE_SUBDATA_FRAGMENT,Chinese,one_race_asian_chinese
+HC01_VC59,CREATE_SUBDATA_FRAGMENT,Filipino,one_race_asian_filipino
+HC01_VC60,CREATE_SUBDATA_FRAGMENT,Japanese,one_race_asian_japanese
+HC01_VC61,CREATE_SUBDATA_FRAGMENT,Korean,one_race_asian_korean
+HC01_VC62,CREATE_SUBDATA_FRAGMENT,Vietnamese,one_race_asian_vietnamese
+HC01_VC63,CREATE_SUBDATA_FRAGMENT,Other Asian,one_race_asian_other_asian
+HC01_VC64,CREATE_DATA_FRAGMENT,Native Hawaiian and Other Pacific Islander,one_race_native_hawaiian_and_other_pacific_islander
+HC01_VC65,CREATE_SUBDATA_FRAGMENT,Native Hawaiian,one_race_native_hawaiian
+HC01_VC66,CREATE_SUBDATA_FRAGMENT,Guamanian or Chamorro,one_race_native_hawaiian_guamanian
+HC01_VC67,CREATE_SUBDATA_FRAGMENT,Samoan,one_race_native_hawaiian_samaon
+HC01_VC68,CREATE_SUBDATA_FRAGMENT,Other Pacific Islander,one_race_native_hawaiian_other_pacific
+HC01_VC69,CREATE_DATA_FRAGMENT,Some other race,one_race_some_other_race
+HC01_VC70,CREATE_DATA_FRAGMENT,Two or more races,two_or_more_races
+HC01_VC71,CREATE_SUBDATA_FRAGMENT,White and Black or African American,two_or_more_races_white_black
+HC01_VC72,CREATE_SUBDATA_FRAGMENT,White and American Indian and Alaska Native,two_or_more_races_white_american
+HC01_VC73,CREATE_SUBDATA_FRAGMENT,White and Asian,two_or_more_races_white_asian
+HC01_VC74,CREATE_SUBDATA_FRAGMENT,Black or African American and American Indian and Alaska Native,two_or_more_races_black_american
+HC01_VC77,NONE,  Race alone or in combination with one or more other races - Total population,NONE
+HC01_VC78,NONE,  Race alone or in combination with one or more other races - Total population - White,NONE
+HC01_VC79,NONE,  Race alone or in combination with one or more other races - Total population - Black or African American,NONE
+HC01_VC80,NONE,  Race alone or in combination with one or more other races - Total population - American Indian and Alaska Native,NONE
+HC01_VC81,NONE,  Race alone or in combination with one or more other races - Total population - Asian,NONE
+HC01_VC82,NONE,  Race alone or in combination with one or more other races - Total population - Native Hawaiian and Other Pacific Islander,NONE
+HC01_VC83,NONE,  Race alone or in combination with one or more other races - Total population - Some other race,NONE
+MODULE_HISPANIC,CREATE_DATA_MODULE,Hispanic or Latino,hispanic_or_latino
+HC01_VC87,CREATE_DATA_POINT,Total population,total_population_his
+HISPANIC_CDP,CREATE_COMPOSITE_DATA_POINT,Hispanic or Latino,hispanic_or_latino_cdp
+HC01_VC88,CREATE_DATA_FRAGMENT,Hispanic or Latino (of any race),hispanic_or_latino_any_race
+HC01_VC89,CREATE_SUBDATA_FRAGMENT,Mexican,hispanic_or_latino_any_race_mexican
+HC01_VC90,CREATE_SUBDATA_FRAGMENT,Puerto Rican,hispanic_or_latino_any_race_puerto_rico
+HC01_VC91,CREATE_SUBDATA_FRAGMENT,Cuban,hispanic_or_latino_any_race_cuban
+HC01_VC92,CREATE_SUBDATA_FRAGMENT,Other Hispanic or Latino,hispanic_or_latino_any_race_other_hispanic
+HC01_VC93,CREATE_DATA_FRAGMENT,Not Hispanic or Latino,not_hispanic_or_latino
+HC01_VC94,CREATE_SUBDATA_FRAGMENT,White alone,not_hispanic_or_latino_white
+HC01_VC95,CREATE_SUBDATA_FRAGMENT,Black or African American alone,not_hispanic_or_latino_black
+HC01_VC96,CREATE_SUBDATA_FRAGMENT,American Indian and Alaska Native alone,not_hispanic_or_latino_american_indian
+HC01_VC97,CREATE_SUBDATA_FRAGMENT,Asian alone,not_hispanic_or_latino_asian
+HC01_VC98,CREATE_SUBDATA_FRAGMENT,Native Hawaiian and Other Pacific Islander alone,not_hispanic_or_latino_native_hawaiian
+HC01_VC99,CREATE_SUBDATA_FRAGMENT,Some other race alone,not_hispanic_or_latino_some_other
+HC01_VC100,CREATE_DATA_FRAGMENT,Two or more races,two_or_more_races_brk
+HC01_VC101,CREATE_SUBDATA_FRAGMENT,Two races including Some other race,two_or_more_races_brk_inclu
+HC01_VC102,CREATE_SUBDATA_FRAGMENT,"Two races excluding Some other race, and Three or more races",two_or_more_races_brk_exclu
+HC01_VC104,NONE, HISPANIC OR LATINO AND RACE - Total housing units,NONE
